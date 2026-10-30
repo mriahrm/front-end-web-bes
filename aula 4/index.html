@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Ingresso - Escola de Princesas</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <h1>Escola de Princesas</h1>
+            <p>Inscrição para ingressar na próxima turma real</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Cadastre sua candidatura</h2>
+                <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
+                    <p>Preencha o formulário para se candidatar a uma vaga na escola. Os campos com * são obrigatórios.</p>
+
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+
+                        <div>
+                            <label for="foto_id">Foto:</label>
+                            <input id="foto_id" name="foto" type="file" accept="image/*">
+                        </div>
+
+                        <div>
+                            <label for="nome_id">Nome completo *:</label>
+                            <input id="nome_id" name="nome" type="text" placeholder="Ex.: Ana Beatriz de Souza" required>
+                        </div>
+
+                        <div>
+                            <label for="telefone_id">Telefone *:</label>
+                            <input id="telefone_id" name="telefone" type="tel" placeholder="(43) 99999-9999" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" title="Use o formato (43) 99999-9999" required>
+                        </div>
+
+                        <div>
+                            <label for="email_id">Email *:</label>
+                            <input id="email_id" name="email" type="email" placeholder="princesa@email.com" required>
+                        </div>
+
+                        <div>
+                            <label for="data_nasc_id">Data de nascimento:</label>
+                            <input id="data_nasc_id" name="data_nasc" type="date">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Endereço do castelo</legend>
+
+                        <div>
+                            <label for="logradouro_id">Logradouro:</label>
+                            <input id="logradouro_id" name="logradouro" type="text" placeholder="Ex.: Rua das Rosas">
+                        </div>
+
+                        <div>
+                            <label for="numero_id">Número:</label>
+                            <input id="numero_id" name="numero" type="number" min="1">
+                        </div>
+
+                        <div>
+                            <label for="cidade_id">Cidade-UF:</label>
+                            <input id="cidade_id" name="cidade" type="text" placeholder="Ex.: Londrina-PR">
+                        </div>
+
+                        <div>
+                            <label for="cep_id">CEP:</label>
+                            <input id="cep_id" name="cep" type="text" placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}" title="Use o formato 00000-000">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Resumo</legend>
+
+                        <div>
+                            <label for="resumo_id">Fale sobre você e por que quer entrar na escola:</label>
+                            <textarea id="resumo_id" name="resumo" rows="4" cols="50" placeholder="Escreva aqui a sua história"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Nível desejado</legend>
+
+                        <div>
+                            <input id="nivel_aprendiz_id" name="nivel" type="radio" value="aprendiz">
+                            <label for="nivel_aprendiz_id">Aprendiz de princesa</label>
+                        </div>
+
+                        <div>
+                            <input id="nivel_junior_id" name="nivel" type="radio" value="junior">
+                            <label for="nivel_junior_id">Princesa júnior</label>
+                        </div>
+
+                        <div>
+                            <input id="nivel_real_id" name="nivel" type="radio" value="real">
+                            <label for="nivel_real_id">Princesa real</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Talentos que você domina</legend>
+
+                        <div>
+                            <input id="talento_danca_id" name="talentos" type="checkbox" value="danca">
+                            <label for="talento_danca_id">Dança</label>
+                        </div>
+
+                        <div>
+                            <input id="talento_canto_id" name="talentos" type="checkbox" value="canto">
+                            <label for="talento_canto_id">Canto</label>
+                        </div>
+
+                        <div>
+                            <input id="talento_equitacao_id" name="talentos" type="checkbox" value="equitacao">
+                            <label for="talento_equitacao_id">Equitação</label>
+                        </div>
+
+                        <div>
+                            <input id="talento_etiqueta_id" name="talentos" type="checkbox" value="etiqueta">
+                            <label for="talento_etiqueta_id">Etiqueta real</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Grau de instrução</legend>
+
+                        <div>
+                            <label for="escolaridade_id">Escolaridade:</label>
+                            <select id="escolaridade_id" name="escolaridade">
+                                <option value="">Selecione</option>
+                                <option value="medio">Ensino Médio</option>
+                                <option value="graduacao">Graduação</option>
+                                <option value="pos">Pós-graduação</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="curso_id">Curso desejado na escola:</label>
+                            <select id="curso_id" name="curso">
+                                <option value="">Selecione</option>
+                                <option value="etiqueta">Etiqueta Real</option>
+                                <option value="danca">Dança de Salão</option>
+                                <option value="diplomacia">Diplomacia e Reinos Aliados</option>
+                                <option value="moda">Moda e Estilo de Corte</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <button type="reset">Limpar dados</button>
+                        <button type="submit">Enviar candidatura</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Todos os direitos reservados &copy; Escola de Princesas</p>
+        </footer>
+    </body>
+</html>
